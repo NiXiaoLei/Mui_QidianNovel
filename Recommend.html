@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美团外卖-小说</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<style>
+		*{
+			font-family: "microsoft yahei";
+		}
+			h5{
+		        padding-top: 8px;
+		        padding-bottom: 8px;
+		        text-indent: 12px;
+		        font-weight: bold;
+		        color: #000;
+		    }
+		    
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				font-size: 15px;
+				margin-top:8px;
+				color: #333;
+			}
+			
+				.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+			
+			.mui-content-padded {
+				padding: 10px;
+			}
+			
+			.mui-content-padded a {
+				margin: 3px;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+			}
+			
+			.mui-content-padded a .mui-icon-extra {
+				margin-top: 12px;
+			}
+			
+			.mui-spinner,
+			.mui-spinner-white {
+				margin-top: 12px
+			}
+			
+			.active .mui-spinner-indicator {
+				background: #007AFF;
+			}
+			
+			.mui-content a {
+				color: #8F8F94;
+			}
+			
+			.mui-content a.active {
+				color: #007aff;
+			}
+			.mui-content-padded a{margin:0 10px 0 10px;}
+		</style>
+		
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: #d23e3b;height:55px">
+				<div style="float:left;">
+					<h1 class="mui-title"style="color:#fff;text-align:left;line-height:60px;" >精选</h1>
+			</div>
+		<div style="float:right;">
+			<span class="mui-icon mui-icon-search" style="color:#fff;line-height:40px;margin-right:10PX;d"></span>
+			<span class="mui-icon-extra mui-icon-extra-filter"style="color:#fff;line-height:40px;"></span>
+		</div>
+			
+		</header>
+		<div class="mui-content" style="margin-top: 15px;"> 
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="img/s01.jpg">
+							<p class="mui-slider-title">绝世武侠系统</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/s02.jpg">
+							<p class="mui-slider-title">电影世界穿梭门</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/s03.jpg">
+							<p class="mui-slider-title">无限先知</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/s05.jpg">
+							<p class="mui-slider-title">永恒魔域</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/s01.jpg">
+							<p class="mui-slider-title">绝世武侠系统</p>
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/s02.jpg">
+							<p class="mui-slider-title">电影世界穿梭门</p>
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator mui-text-right">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mui-content-padded" style="width:360px;margin:0 auto 0 auto;">	
+			<div class="mui-content-padded">
+			<a>
+			<span class="mui-icon-extra mui-icon-extra-rank" style="color:#666;">
+			</span>
+			<p style="margin-top:15px;color:#333;">排行榜</p>
+			</a>
+			<a href="classify.html">
+				<span class="mui-icon-extra mui-icon-extra-class" style="color:#666;">
+				</span>
+				<p style="margin-top:15px;color:#333;">分类</p>
+			</a>
+			<a><span class="mui-icon-extra mui-icon-extra-holiday" style="color:#666;"></span>
+				<p style="margin-top:15px;color:#333;">三江榜</p>
+			</a>
+			<a>
+				<span class="mui-icon-extra mui-icon-extra-gift" style="color:#FF0000;" ></span>
+					<p style="margin-top:15px;color:#333;">新人礼</p>
+			</a>
+			</div>
+		</div>
+		<!-------------------------------------->
+		<div class="mui-content" style="background-color:#fff;margin:-10px 0 7px 0;padding-top: 2px;">
+		    <h5 style="background-color:#efeff4;text-align: center;">风云榜</h5>
+		    <ul class="mui-table-view mui-grid-view" id="fyb">
+		        <!--<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/fy01.jpg">
+		                <div class="mui-media-body">24小时热销榜</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/fy02.jpg">
+		                <div class="mui-media-body">新锐会员周点击榜</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" style="width:130px;height:170px;" src="img/fy03.jpg">
+		                <div class="mui-media-body">周推荐票榜</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/fy04.jpg">
+		                <div class="mui-media-body">签约作家新书榜</div></a></li>-->
+		    </ul>    
+		</div>
+		<!--------------------------------->
+		<div class="mui-content" style="background-color:#fff;margin:-10px 0 7px 0;padding-top: 2px;">
+		    <h5 style="background-color:#efeff4;text-align: center;">热门作品</h5>
+		    <ul class="mui-table-view mui-grid-view" id="rm">
+		        <!--<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/rm01.jpg">
+		                <div class="mui-media-body">新书推荐</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/rm02.jpg">
+		                <div class="mui-media-body">完本精品</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" style="width:130px;height:170px;" src="img/rm03.jpg">
+		                <div class="mui-media-body">最近更新</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/rm04.jpg">
+		                <div class="mui-media-body">限时免费</div></a></li>-->
+		    </ul>    
+		</div>
+			<!--------------------------------->
+		<div class="mui-content" style="background-color:#fff;margin:-10px 0 51px 0;padding-top: 2px;">
+		    <h5 style="background-color:#efeff4;text-align: center;">猜你喜欢</h5>
+		    <ul class="mui-table-view mui-grid-view" id="like">
+		        <!--<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/wjdl.jpg">
+		                <div class="mui-media-body">新书推荐</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/nwyw.jpg">
+		                <div class="mui-media-body">完本精品</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" style="width:130px;height:170px;" src="img/tmls.jpg">
+		                <div class="mui-media-body">最近更新</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/qx.jpg">
+		                <div class="mui-media-body">限时免费</div></a></li>
+		                  <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" style="width:130px;height:170px;" src="img/hx.jpg">
+		                <div class="mui-media-body">最近更新</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" style="width:130px;height:170px;" src="img/tsg.jpg">
+		                <div class="mui-media-body">限时免费</div></a></li>
+		                -->
+		    </ul>    
+		</div>
+		
+			<!-------------------------------------->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item tz" href="index.html" >
+				<span class="mui-icon mui-icon-home mui-icon-extra mui-icon-extra-dictionary" style="font-size: 19px;"></span>
+				<span class="mui-tab-label">书架</span>
+			</a>
+			<a class="mui-tab-item  tz" href="Recommend.html" style="color:#d23e3b;" id="in2">
+				<span class="mui-icon mui-icon-email mui-icon-extra mui-icon-extra mui-icon-extra-share"  style="font-size: 19px;"></span>
+				<span class="mui-tab-label">精选</span>
+			</a>
+			<a class="mui-tab-item tz" href="found.html">
+				<span class="mui-icon mui-icon-contact mui-icon-extra mui-icon-extra-find " ><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a class="mui-tab-item tz" href="user.html">
+				<span class="mui-icon mui-icon-gear mui-icon-extra mui-icon-extra-peoples"></span>
+				<span class="mui-tab-label">账户</span>
+			</a>
+		</nav>
+		
+
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/bookdata.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+        slider.slider({
+			interval: 2000
+		});
+		$('.tz').on('click',function(){
+				var sz=["index.html","Recommend.html","found.html","user.html"]
+			    var index=$(this).index();
+			   location.href=sz[index];
+		
+		})
+		
+	
+		function add4(txt,obj){  //标签，对象
+			for(i=0;i<4;i++){
+				var j=parseInt(Math.random()*40);   
+				var innerHtml='<li class="mui-table-view-cell mui-media mui-col-xs-6 tc">'+
+		            '<a href="#"><img class="mui-media-object" style="width:130px;height:170px;" src="'+book[j].img+'">'+
+		                '<div class="mui-media-body">'+txt[i]+'</div></a></li>'
+		           $(obj).append(innerHtml)
+			}
+		}
+		var list=["24小时热销榜","新锐会员周点击榜","周推荐票榜","签约作家新书榜"]
+		var obj=$('#fyb')
+		add4(list,obj)
+		var list=["新书推荐","完本精品","最近更新","限时免费"]
+		var obj=$('#rm')
+		add4(list,obj)
+		function add6(){
+			for(i=0;i<6;i++){
+				var j=parseInt(Math.random()*40);   
+				var innerHtml='<li class="mui-table-view-cell mui-media mui-col-xs-6 tc">'+
+		             '<a href="#"><img class="mui-media-object" style="width:130px;height:170px;" src="'+book[j].img+'">'+
+		                '<div class="mui-media-body">'+book[j].name+'</div></a></li>'
+		           $('#like').append(innerHtml)
+			}
+		}
+	add6()
+	
+	$('.mui-content').on('click','.tc',function(){
+		img=$(this).find('img').attr('src');
+		localStorage.img=img;
+		location.href='introduce.html'
+	})
+	
+	
+	
+	
+	</script>
+	
+	
+</html>

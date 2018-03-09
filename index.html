@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美团外卖-小说</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bookdata.js"></script>
+	</head>
+	<style>
+		*{
+			font-family: "microsoft yahei";
+		}
+			h5{
+		        padding-top: 8px;
+		        padding-bottom: 8px;
+		        text-indent: 12px;
+		        font-weight: bold;
+		        color: #000;
+		    }
+		    
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				font-size: 15px;
+				margin-top:8px;
+				color: #333;
+			}
+			
+				.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+			
+			.mui-content-padded {
+				padding: 10px;
+			}
+			
+			.mui-content-padded a {
+				margin: 3px;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+			}
+			
+			.mui-content-padded a .mui-icon-extra {
+				margin-top: 12px;
+			}
+			
+			.mui-spinner,
+			.mui-spinner-white {
+				margin-top: 12px
+			}
+			
+			.active .mui-spinner-indicator {
+				background: #007AFF;
+			}
+			
+			.mui-content a {
+				color: #8F8F94;
+			}
+			
+			.mui-content a.active {
+				color: #007aff;
+			}
+			.mui-content-padded a{margin:0 10px 0 10px;}
+		</style>
+		
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: #d23e3b;height:55px">
+			<div style="float:left;">
+					<h1 class="mui-title"style="color:#fff;text-align:left;line-height: 60px;" >我的书架</h1>
+			</div>
+		<div style="float:right;">
+			<span class="mui-icon mui-icon-search" style="color:#fff;"></span>
+			<a href="classify.html"><span class="mui-icon mui-icon-bars" style="color:#fff;line-height:35px;"></span></a>
+		</div>
+			
+		</header>
+		
+	<!---------------------------------------------头部------>
+	<div class="mui-content">
+	<ul class="mui-table-view mui-table-view-chevron" id="sj" style="margin-top: 20px;margin-bottom: 50px;">
+			</ul>
+	</div>
+	
+	
+	
+	
+			<!-------------------------------------->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item  tz" href="index.html" style="color:#d23e3b;" >
+				<span class="mui-icon mui-icon-home mui-icon-extra mui-icon-extra-dictionary" style="font-size: 19px;"></span>
+				<span class="mui-tab-label">书架</span>
+			</a>
+			<a class="mui-tab-item  tz" href="Recommend.html">
+				<span class="mui-icon mui-icon-email mui-icon-extra mui-icon-extra mui-icon-extra-share"  style="font-size: 19px;"></span>
+				<span class="mui-tab-label">精选</span>
+			</a>
+			<a class="mui-tab-item tz" href="found.html">
+				<span class="mui-icon mui-icon-contact mui-icon-extra mui-icon-extra-find " ><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a class="mui-tab-item tz" href="user.html">
+				<span class="mui-icon mui-icon-gear mui-icon-extra mui-icon-extra-peoples"></span>
+				<span class="mui-tab-label">账户</span>
+			</a>
+		</nav>
+		<a href="index.html" class="tz"></a>
+	</body>
+	<script src="js/mui.min.js"></script>
+	
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+        slider.slider({
+			interval: 2000
+		});
+		
+		
+		function add(){
+			for(i=0;i<20;i++){
+			var j=parseInt(Math.random()*30);   
+			var innerHtml='<li class="mui-table-view-cell mui-media"><a class="mui-navigate-right" href="article.html"><img class="mui-media-object mui-pull-left" src="'+book[j].img+'"><div class="mui-media-body">'+book[j].name+'<p class="mui-ellipsis">'+book[j]["main"]+'</p></div></a></li>'
+			
+			$('#sj').append(innerHtml);
+			}
+		}
+		add()
+			$('.tz').on('click',function(){
+				var sz=["index.html","Recommend.html","found.html","user.html"]
+			    var index=$(this).index();
+			location.href=sz[index];
+		
+		})
+		
+	var progressbar3 = mui('#demo3');
+			progressbar3.on('tap', 'button', function() {
+				mui('body').progressbar({
+					progress: 0
+				}).show();
+				simulateLoading(0);
+			});
+	</script>
+	
+	
+</html>

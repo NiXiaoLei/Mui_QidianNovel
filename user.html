@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美团外卖-小说</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bookdata.js"></script>
+	</head>
+	<style>
+		*{
+			font-family: "microsoft yahei";
+		}
+			h5{
+		        padding-top: 8px;
+		        padding-bottom: 8px;
+		        text-indent: 12px;
+		        font-weight: bold;
+		        color: #000;
+		    }
+		    
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				font-size: 15px;
+				margin-top:8px;
+				color: #333;
+			}
+			
+				.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+			
+			.mui-content-padded {
+				padding: 10px;
+			}
+			
+			.mui-content-padded a {
+				margin: 3px;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+			}
+			
+			.mui-content-padded a .mui-icon-extra {
+				margin-top: 12px;
+			}
+			
+			.mui-spinner,
+			.mui-spinner-white {
+				margin-top: 12px
+			}
+			
+			.active .mui-spinner-indicator {
+				background: #007AFF;
+			}
+			
+			.mui-content a {
+				color: #8F8F94;
+			}
+			
+			.mui-content a.active {
+				color: #007aff;
+			}
+			.mui-content-padded a{margin:0 10px 0 10px;}
+		</style>
+		
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: #d23e3b;height:55px">
+				<div style="float:left;">
+					<h1 class="mui-title"style="color:#fff;text-align:left;line-height:60px;" >精选</h1>
+			</div>
+		<div style="float:right;">
+			<span class="mui-icon mui-icon-email-filled" style="color:#fff;line-height:40px;margin-right:10PX;font-size:26px;"></span>
+			<span class="mui-icon mui-icon-gear-filled"style="color:#fff;line-height:40px;font-size:26px;"></span>
+		</div>
+			
+		</header>
+	<!---------------------------------------------头部------>
+         
+	<form class="mui-input-group" style="margin-top:60px">
+					<div class="mui-input-row">
+						<label>账号:</label>
+						<input type="text" placeholder="用户昵称或手机号">
+					</div>
+					<div class="mui-input-row">
+						<label>密码:</label>
+						<input type="password" class="mui-input-clear" placeholder="请输入密码" data-input-clear="5"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+					</div>
+
+					<div class="mui-input-row mui-plus-visible">
+						<label></label>
+						<input type="text" class="mui-input-speech mui-input-clear" placeholder="语音输入" data-input-clear="6" data-input-speech="6"><span class="mui-icon mui-icon-clear mui-hidden"></span><span class="mui-icon mui-icon-speech"></span>
+					</div>
+					<div class="mui-button-row">
+						<button type="button" id="login" class="mui-btn mui-btn-primary" onclick="return false;">确认</button>&nbsp;&nbsp;
+						<button type="button" class="mui-btn mui-btn-danger" onclick="return false;">取消</button>
+					</div>
+				
+				</form>
+	<!------------------>
+                <div style="width:200px;text-align:center;margin:10px auto;font-size:15px;"><a href="member.html">关于我们</a></div>
+			<!-------------------------------------->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item  tz" href="index.html" >
+				<span class="mui-icon mui-icon-home mui-icon-extra mui-icon-extra-dictionary" style="font-size: 19px;"></span>
+				<span class="mui-tab-label">书架</span>
+			</a>
+			<a class="mui-tab-item  tz" href="Recommend.html">
+				<span class="mui-icon mui-icon-email mui-icon-extra mui-icon-extra mui-icon-extra-share"  style="font-size: 19px;"></span>
+				<span class="mui-tab-label">精选</span>
+			</a>
+			<a class="mui-tab-item  tz" href="found.html">
+				<span class="mui-icon mui-icon-contact mui-icon-extra mui-icon-extra-find " ><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a class="mui-tab-item tz" href="user.html" style="color:#d23e3b;">
+				<span class="mui-icon mui-icon-gear mui-icon-extra mui-icon-extra-peoples"></span>
+				<span class="mui-tab-label">账户</span>
+			</a>
+		</nav>
+		<a href="index.html" class="tz"></a>
+	</body>
+	<script src="js/mui.min.js"></script>
+	
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+        slider.slider({
+			interval: 2000
+		});
+		
+		
+		$('.tz').on('click',function(){
+				var sz=["index.html","Recommend.html","found.html","user.html"]
+			    var index=$(this).index();
+			    　location.href=sz[index];
+		
+		})
+				var info = document.getElementById("login");
+			document.getElementById("login").addEventListener('tap', function() {
+				mui.alert('登录成功', '提示', function() {
+					
+				});
+			});
+			mui.alert('请先登陆', '提示', function() {
+					
+				});
+	</script>
+	
+	
+</html>

@@ -1,0 +1,173 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美团外卖-小说</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bookdata.js"></script>
+	</head>
+	<style>
+		*{
+			font-family: "microsoft yahei";
+		}
+			h5{
+		        padding-top: 8px;
+		        padding-bottom: 8px;
+		        text-indent: 12px;
+		        font-weight: bold;
+		        color: #000;
+		    }
+		    
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				font-size: 15px;
+				margin-top:8px;
+				color: #333;
+			}
+			
+				.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+			
+			.mui-content-padded {
+				padding: 10px;
+			}
+			
+			.mui-content-padded a {
+				margin: 3px;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+			}
+			
+			.mui-content-padded a .mui-icon-extra {
+				margin-top: 12px;
+			}
+			
+			.mui-spinner,
+			.mui-spinner-white {
+				margin-top: 12px
+			}
+			
+			.active .mui-spinner-indicator {
+				background: #007AFF;
+			}
+			
+			.mui-content a {
+				color: #8F8F94;
+			}
+			
+			.mui-content a.active {
+				color: #007aff;
+			}
+			.mui-content-padded a{margin:0 10px 0 10px;}
+		</style>
+		
+	<body style="background:url(img/xsbg.jpg);">
+   			<div style="text-indent:2em;line-height: 1.5em;font-size:23px;padding:10px 20px 10px 20px;font-family:'Microsoft YaHei'">
+	
+   				九月份的泉城，温度依然高居不下。下午第一节的政治课，更是让所有学生昏昏欲睡。
+
+    教室的角落里，综合了临窗、通风、透气、隐蔽等等优点的绝佳位置，一个趴在桌上呼呼大睡的青年，猛地从座位上站起身来，桌子与椅子发出‘枝丫’的声音。
+
+    霎时间，不论是讲台前带着厚实眼镜的老教授，还是教室内的同学们，目光都扫了过来。
+
+    老教授的脸色并不好看，他早就注意到了这个上课时睡懒觉的同学，正用杀人般的恼怒目光，狠狠地瞪着这个青年学生。
+
+    在所有人的目光下，唐修先是一怔，继而露出震惊、不可思议、疑惑等神色，好在他注意到了周围的环境，又老老实实地坐了下来。
+
+    老教授又狠狠地瞪了他一眼，政治课这才得以继续。
+
+    “你倒霉了，老头肯定记住你了，哈，等着挂科吧！”坐在唐修前边的同学，回过头来朝他挤了挤眼睛，幸灾乐祸地低声笑道。
+
+    “呵……”唐修勉强笑了笑，他记得，前面这个同学的名字叫陈东，‘后来’在学校里也算是一个风云人物。
+
+    只是这个时候，他哪里还有心情去计较有关陈东的事情，甚至都没有听清楚陈东说了什么，只是应付似地笑了笑。
+
+    陈东也笑了一下，转过了头去。
+
+    唐修拿出手机，看了一眼上面的日期与时间，眼神微微凝住。
+
+    2017年9月10日，14点35分。
+
+    再看看课堂上的老教授，与周围的同学们，以及窗户外的烈日，一切都仿佛变得不真实起来。
+
+    唐修狠狠捏了一下终极手臂上的肉，疼痛感将他拉回现实，心中掀起翻江倒海一般的惊骇。
+
+    “这不是一年多前的那堂政治课吗？”
+
+    “我怎么会在这里？难道……我重生了？”
+
+    “正是在这堂政治课上，全球都发生了翻天覆地般的变化！”
+
+    唐修暗暗低语，很难相信自己竟然重生了，而且如果那一切都不是一场梦，那么接下来不到10分钟，就会发生令整个地球都要颤抖的一件大事。</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+        slider.slider({
+			interval: 2000
+		});
+		
+//		function xq(){
+////			document.cookie.split(";")[0].split("=")[1];
+//			var neirong='';
+//			var img=document.cookie.split(";")[0].split("=")[1];
+//			if(img==""||img==null||img==undefined){
+//					img='img/hx.jpg'
+//			}
+//			var name=''
+//			for(i=0;i<book.length;i++){
+//				if(book[i].img==img){
+//					neirong=book[i].main;
+//					name=book[i].name;
+//					$('.mui-title').html(name);
+//					var innerHtml='<a herf="article.html"><div class="mui-card-header mui-card-media tg" style="width:60%;margin:0 auto;height:60vw;background-image:url('+img+');background-size:100% 100%;"></div>'+
+//				'<div class="mui-card-content"><div class="mui-card-content-inner"><p style="color:#000;font-size:20px;">'+name+'</p>'+
+//				'<p style="color: #333;">'+neirong+'</p>'+
+//				'</div></div><div class="mui-card-footer"><a class="mui-card-link" id="add">加入书架</a><a class="mui-card-link">投票互动</a><a class="mui-card-link">免费试读</a>'+
+//				'</div></a>';
+//			$("#xs").append(innerHtml);
+//					
+//				}
+//				
+//			}
+//			
+//		}
+//	xq();
+//	
+//	
+//		$('.tz').on('click',function(){
+//				var sz=["index.html","Recommend.html","found.html","user.html"]
+//			    var index=$(this).index();
+//			  location.href=sz[index];
+//		
+//		})
+//		
+	
+	</script>
+</html>
